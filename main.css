@@ -1,0 +1,32 @@
+div{
+    float: right;
+}
+.titulo-consulta {
+    color: #ffffff; /* Color inicial */
+    transition: color 0.3s; /* Transición suave */
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin-bottom: 10 px;
+    
+}
+
+div.imagen{
+    position: relative;
+    margin-left: 100px;
+}
+
+.titulo-consulta:hover {
+    color: #87c9a4; /* Color al pasar el ratón */
+}
+
+.explicacion-consulta {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin-right: 50px;
+    
+}
+
+body {
+    background-color: #2e2e2e;
+}
