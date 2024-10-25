@@ -1,0 +1,13 @@
+#container p {
+    color: blue;
+}
+
+#container {
+    background-color:bisque;
+}
+
+body {
+    background-image: url('../img/Agatha.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
