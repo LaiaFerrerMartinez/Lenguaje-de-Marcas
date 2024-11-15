@@ -1,0 +1,151 @@
+/* Estilos base para Mobile First */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav {
+    position: absolute;
+    left: 20px; /* Alinea el menú a la izquierda */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 50px; /* Ajusta el tamaño del logo */
+}
+
+main {
+    padding: 20px;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Contenedor Flexbox para la galería */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1 1 30%; /* Cada imagen ocupará el 30% del ancho del contenedor */
+    max-width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.flex-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.flex-item img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 600px) {
+    header {
+        padding: 15px 40px;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    .gallery h2 {
+        font-size: 2.5rem;
+    }
+
+    .flex-container {
+        justify-content: space-between;
+    }
+
+    .flex-item {
+        flex: 1 1 30%; /* Ajuste para que las imágenes ocupen el 30% en pantallas más grandes */
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        padding: 20px 60px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    nav ul li {
+        margin-right: 40px;
+    }
+
+    .gallery h2 {
+        font-size: 3rem;
+    }
+
+    .flex-container {
+        justify-content: space-between;
+    }
+
+    .flex-item {
+        flex: 1 1 30%;
+    }
+}

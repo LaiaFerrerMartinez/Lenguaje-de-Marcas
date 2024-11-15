@@ -1,0 +1,217 @@
+/* Estilos base para Mobile First */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav {
+    position: absolute;
+    left: 20px; /* Alinea el menú a la izquierda */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 50px; /* Ajusta el tamaño del logo */
+}
+
+main {
+    padding: 20px;
+}
+
+/* Galería de Imágenes */
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex: 1 1 30%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Cards */
+.cards h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 600px) {
+    header {
+        padding: 15px 40px;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    .gallery h2 {
+        font-size: 2.5rem;
+    }
+
+    .flex-container {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 30%; /* En pantallas más grandes, las cards ocupan el 30% */
+    }
+
+    .gallery-item {
+        flex: 1 1 30%;
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        padding: 20px 60px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    nav ul li {
+        margin-right: 40px;
+    }
+
+    .cards h2 {
+        font-size: 3rem;
+    }
+
+    .gallery h2 {
+        font-size: 3rem;
+    }
+
+    .flex-container {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+    .gallery-item {
+        flex: 1 1 30%;
+    }
+}

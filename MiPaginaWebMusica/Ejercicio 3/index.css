@@ -1,0 +1,121 @@
+/* Estilos base para Mobile First */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav {
+    position: absolute;
+    left: 20px; /* Alinea el menú a la izquierda */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 50px; /* Ajusta el tamaño del logo */
+}
+
+.hero {
+    background-color: #00bcd4;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.content {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 600px) {
+    header {
+        padding: 15px 40px;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        padding: 20px 60px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    nav ul li {
+        margin-right: 40px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .content {
+        width: 70%;
+    }
+}

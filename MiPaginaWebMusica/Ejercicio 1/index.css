@@ -1,0 +1,97 @@
+/* Estilos base para Mobile First */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.hero {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.feature {
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 600px) {
+    .features {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .feature {
+        width: 30%;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        margin-right: 40px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .feature {
+        padding: 30px;
+    }
+}

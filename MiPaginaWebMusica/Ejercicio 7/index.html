@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería y Cards con Flexbox</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Canciones</a></li>
+                <li><a href="#">Álbumes</a></li>
+                <li><a href="#">Cantantes</a></li>
+                <li><a href="#">Premios</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo de la empresa">
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección de Galería -->
+        <section class="gallery">
+            <h2>Galería de Imágenes</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="cancion.png" alt="Imagen 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="album_tit.png" alt="Imagen 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="artista.png" alt="Imagen 3">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Cards -->
+        <section class="cards">
+            <h2>Conoce a nuestro equipo</h2>
+            <div class="flex-container">
+                <div class="card">
+                    <img src="cancion.jpg" alt="Persona 1">
+                    <div class="card-info">
+                        <h3>Canción del año</h3>
+                        <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="album.jpg" alt="Persona 2">
+                    <div class="card-info">
+                        <h3>Álbum del año</h3>
+                        <p>Álbum del año: "Short n' Sweet" de Sabrina Carpenter</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="cantante.jpg" alt="Persona 3">
+                    <div class="card-info">
+                        <h3>Cantante del año</h3>
+                        <p>Cantante del año: Taylor Swift</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Sitio Web</p>
+    </footer>
+</body>
+</html>
