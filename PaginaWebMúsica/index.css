@@ -1,0 +1,120 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #01031A;
+}
+
+/* Cabecera */
+header {
+    display: flex; /* Activa flexbox para la disposición */
+    justify-content: space-between; /* Distribuye elementos: logo+nombre a la izquierda, menú a la derecha */
+    align-items: center; /* Alinea verticalmente los elementos */
+    background-color: #01031A;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Logo y Nombre */
+.logo-nombre {
+    display: flex; /* Activa flexbox para el logo y el nombre */
+    align-items: center; /* Alinea verticalmente logo y nombre */
+    gap: 25px; /* Espacio entre el logo y el nombre */
+}
+
+.logo-nombre .logo {
+    height: 62px; /* Tamaño del logo */
+}
+
+.logo-nombre .nombre {
+    font-size: 32px; /* Tamaño del texto del nombre */
+    font-weight: bold;
+    color: white;
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none; /* Elimina los puntos de lista */
+    display: flex; /* Coloca los elementos en línea */
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #B9B8B5; /* Color en hover */
+}
+
+/* Sección Hero */
+.hero {
+    background-color: #BEBEBE;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Contenido */
+.content {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #01031A;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 600px) {
+    header {
+        padding: 15px 40px;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        padding: 20px 60px;
+    }
+
+    .logo-nombre img {
+        height: 50px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .content {
+        width: 70%;
+    }
+}
