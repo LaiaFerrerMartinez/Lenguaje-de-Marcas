@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Lora' sans-serif';
+    font-family: 'Lora', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #01031A;
@@ -56,12 +56,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #B9B8B5; /* Color en hover */
+    color: 	#718197; /* Color en hover */
 }
 
 /* Sección Hero */
 .hero {
-    background-color: #BEBEBE;
+    background-color: #b8d6ff;
     color: white;
     text-align: center;
     padding: 50px 20px;
