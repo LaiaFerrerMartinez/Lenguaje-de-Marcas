@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lora' sans-serif';
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #01031A;
@@ -20,6 +20,8 @@ header {
     background-color: #01031A;
     color: white;
     padding: 10px 20px;
+    height: 75px;
+    font-family: 'Lora', sans-serif;
 }
 
 /* Logo y Nombre */
