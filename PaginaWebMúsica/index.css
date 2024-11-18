@@ -51,13 +51,52 @@ nav ul {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 20px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: 	#718197; /* Color en hover */
+    color: 	#b8d6ff; /* Color en hover */
 }
+
+/* Contenedor del slider */
+.slider-container {
+    width: 1280px;  /* Ancho del contenedor */
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;  /* Ocultamos lo que se sale del contenedor */
+}
+
+/* Lista que contiene los elementos del slider */
+.slider-container ul {
+    list-style: none;
+    display: flex; /* Los elementos estarán en fila */
+    width: 400%;  /* El ancho total de la lista es 4 veces el ancho del contenedor (25% por cada imagen) */
+    animation: movimiento-slider 15s infinite alternate ease-in-out;
+}
+
+/* Cada elemento del slider */
+.slider-container ul li {
+    flex-shrink: 0;  /* No permitirá que los elementos se compriman */
+    width: 25%;  /* Cada elemento ocupa el 25% del contenedor */
+}
+
+/* Animación para mover el contenido hacia la izquierda de forma continua */
+@keyframes movimiento-slider {
+    0% {
+        transform: translateX(0); /* Comienza desde la posición inicial */
+    }
+    25% {
+        transform: translateX(-25%); /* Mueve el contenido 25% hacia la izquierda */
+    }
+    50% {
+        transform: translateX(-50%); /* Mueve el contenido 50% hacia la izquierda */
+    }
+    75% {
+        transform: translateX(-75%); /* Mueve el contenido 75% hacia la izquierda */
+    }
+}
+
 
 /* Sección Hero */
 .hero {
@@ -82,6 +121,20 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%}
+    20% {margin-left: 0%}
+
+    25% {margin-left: -100%}
+    45% {margin-left: -100%}
+
+    50% {margin-left: -200%}
+    70% {margin-left: -200%}
+
+    75% {margin-left: -300%}
+    95% {margin-left: -300%}
 }
 
 /* Media Queries para pantallas más grandes */
