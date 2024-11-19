@@ -19,7 +19,7 @@ header {
     align-items: center; /* Alinea verticalmente los elementos */
     background-color: #01031A;
     color: white;
-    padding: 10px 20px;
+    padding: px 20px;
     height: 75px;
     font-family: 'Lora', sans-serif;
 }
@@ -59,45 +59,99 @@ nav ul li a:hover {
     color: 	#b8d6ff; /* Color en hover */
 }
 
-/* Contenedor del slider */
-.slider-container {
-    width: 1280px;  /* Ancho del contenedor */
-    height: auto;
+#carrusel-caja {
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+    height: 720px;
+    width: 400%;
     margin: 0 auto;
-    overflow: hidden;  /* Ocultamos lo que se sale del contenedor */
+}
+#carrusel-contenido {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+}
+.imagenes{
+    height: 720px;
+    width: 100%;
+}
+.carrusel-elemento {
+    float: left;
+    width: 25%;
+}
+.carousel-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
 }
 
-/* Lista que contiene los elementos del slider */
-.slider-container ul {
-    list-style: none;
-    display: flex; /* Los elementos estarán en fila */
-    width: 400%;  /* El ancho total de la lista es 4 veces el ancho del contenedor (25% por cada imagen) */
-    animation: movimiento-slider 15s infinite alternate ease-in-out;
-}
-
-/* Cada elemento del slider */
-.slider-container ul li {
-    flex-shrink: 0;  /* No permitirá que los elementos se compriman */
-    width: 25%;  /* Cada elemento ocupa el 25% del contenedor */
-}
-
-/* Animación para mover el contenido hacia la izquierda de forma continua */
-@keyframes movimiento-slider {
+@-moz-keyframes automatizacion {
     0% {
-        transform: translateX(0); /* Comienza desde la posición inicial */
+        margin-left: 0;
     }
     25% {
-        transform: translateX(-25%); /* Mueve el contenido 25% hacia la izquierda */
+        margin-left: -100%;
     }
     50% {
-        transform: translateX(-50%); /* Mueve el contenido 50% hacia la izquierda */
+        margin-left: -200%;
     }
     75% {
-        transform: translateX(-75%); /* Mueve el contenido 75% hacia la izquierda */
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: 0;
     }
 }
-
-
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
 /* Sección Hero */
 .hero {
     background-color: #b8d6ff;
@@ -108,9 +162,9 @@ nav ul li a:hover {
 
 /* Contenido */
 .content {
-    padding: 20px;
+    
     background-color: white;
-    margin: 20px auto;
+    margin: 0 auto;
     width: 90%;
     max-width: 900px;
 }
@@ -120,7 +174,7 @@ footer {
     background-color: #01031A;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 0 0;
 }
 
 @keyframes slide {
