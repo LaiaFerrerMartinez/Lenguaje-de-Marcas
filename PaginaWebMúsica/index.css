@@ -8,7 +8,7 @@
 body {
     font-family: 'Lora', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #C1C6FD;
     color: #01031A;
 }
 
@@ -154,7 +154,7 @@ nav ul li a:hover {
 }
 /* Sección Hero */
 .hero {
-    background-color: #b8d6ff;
+    background-color: #01031A;
     color: white;
     text-align: center;
     padding: 50px 20px;
