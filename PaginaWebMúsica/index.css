@@ -30,6 +30,8 @@ header {
     display: flex;
     align-items: center;
     gap: 25px;
+    margin-top: 25px;
+    margin-left: 25px;
 }
 
 .logo-nombre .logo {
@@ -45,17 +47,58 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Mayor espacio entre los elementos principales */
+    margin-right: 75px;
+    margin-top: 25px;
+}
+
+nav ul li {
+    position: relative;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    padding: 10px 15px; /* Reducción de padding para menos separación */
     transition: text-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Menú desplegable */
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #003366;
+    padding: 5px 0; /* Reducir padding para menos espacio */
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+}
+
+.dropdown-menu li {
+    margin: 0; /* Eliminar margen para reducir espacio entre opciones */
+}
+
+.dropdown-menu li a {
+    color: white;
+    padding: 10px 15px; /* Ajustar padding de los elementos secundarios */
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #003366;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
@@ -189,6 +232,7 @@ nav ul li a:hover {
         margin-left: 0;
     }
 }
+
 /* Pie de página */
 footer {
     background-color: #070B5A;

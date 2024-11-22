@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
+    <header id="incio">
         <div class="logo-nombre">
             <img class="logo" src="logo.png" alt="Logo de la empresa">
             <span class="nombre">Musical Culture</span>
@@ -16,16 +16,53 @@
         <nav>
             <ul>
                 <li><a href="#inicio"><b>Inicio</b></a></li>
-                <li><a href="#canciones"><b>Canciones</b></a></li>
-                <li><a href="#albumes"><b>Álbumes</b></a></li>
-                <li><a href="#artistas"><b>Artistas</b></a></li>
-                <li><a href="#premios"><b>Premios</b></a></li>
+                <li class="dropdown">
+                    <a href="#canciones"><b>Canciones</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">2022</a></li>
+                        <li><a href="#">2021</a></li>
+                        <li><a href="#">2020</a></li>
+                        <li><a href="#">Antes del 2020</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#albumes"><b>Álbumes</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">2022</a></li>
+                        <li><a href="#">2021</a></li>
+                        <li><a href="#">2020</a></li>
+                        <li><a href="#">Antes del 2020</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#artistas"><b>Artistas</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">2022</a></li>
+                        <li><a href="#">2021</a></li>
+                        <li><a href="#">2020</a></li>
+                        <li><a href="#">Antes del 2020</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#premios"><b>Premios</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.grammy.com/">Grammy Awards</a></li>
+                        <li><a href="https://www.brits.co.uk/">Brits Awards</a></li>
+                        <li><a href="https://www.mtv.com/vma">MTV VMAs</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <section class="hero" id="inicio">
+        <section class="hero">
             <h1>¡Todas las novedades musicales!</h1>
             <p>Bienvenidos a Musical Culture, tu destino para descubrir lo último en música.</p>
         </section>
@@ -38,21 +75,21 @@
                     <div class="carrusel-elemento">
                         <img src="cancion.jpg" alt="Canción 1">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>"Fortnight" - Taylor Swift</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                     </div>
                     <div class="carrusel-elemento">
                         <img src="cancion.jpg" alt="Canción 2">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>"Espresso" - Sabrina Carpenter</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                     </div>
                     <div class="carrusel-elemento">
                         <img src="cancion.jpg" alt="Canción 3">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>"BIRDS OF A FEATHER" - Billie Eilish</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                     </div>
@@ -65,21 +102,21 @@
                 <div id="carrusel-caja">
                     <div class="carrusel-elemento">
                         <div class="card-info">
-                            <h3>Álbum del año</h3>
+                            <h3>"Short n' Sweet" - Sabrina Carpenter</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                         <img src="cancion.jpg" alt="Álbum 1">
                     </div>
                     <div class="carrusel-elemento">
                         <div class="card-info">
-                            <h3>Álbum del año</h3>
+                            <h3>"BRAT" - Charli xcx</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                         <img src="cancion.jpg" alt="Álbum 2">
                     </div>
                     <div class="carrusel-elemento">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>"The Tortured Poets Department" - Taylor Swift</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                         <img src="cancion.jpg" alt="Canción 3">
@@ -92,23 +129,23 @@
             <div id="carrusel-contenido">
                 <div id="carrusel-caja">
                     <div class="carrusel-elemento">
-                        <img src="cancion.jpg" alt="Canción 1">
+                        <img src="img/artistas/sabrina.jpg" alt="Canción 1">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>Sabrina Carpenter</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                     </div>
                     <div class="carrusel-elemento">
                         <img src="cancion.jpg" alt="Canción 2">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>Taylor Swift</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                     </div>
                     <div class="carrusel-elemento">
                         <img src="cancion.jpg" alt="Canción 3">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>Benson Boone</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                     </div>
@@ -121,21 +158,21 @@
                 <div id="carrusel-caja">
                     <div class="carrusel-elemento">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>Grammys</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                         <img src="cancion.jpg" alt="Canción 1">
                     </div>
                     <div class="carrusel-elemento">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>Brits Awards</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                         <img src="cancion.jpg" alt="Canción 2">
                     </div>
                     <div class="carrusel-elemento">
                         <div class="card-info">
-                            <h3>Canción del año</h3>
+                            <h3>MTV VMAs</h3>
                             <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
                         </div>
                         <img src="cancion.jpg" alt="Canción 3">
