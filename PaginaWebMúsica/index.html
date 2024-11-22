@@ -3,71 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de Cabecera con Logo y Menú</title>
+    <title>Slider de Cards Musicales</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
         <div class="logo-nombre">
-            <img class = "logo" src="logo.png" alt="Logo de la empresa">
+            <img class="logo" src="logo.png" alt="Logo de la empresa">
             <span class="nombre">Musical Culture</span>
         </div>
         <nav>
             <ul>
-                <li><a href="#"><b>Inicio</b></a></li>
-                <li><a href="#"><b>Canciones</b></a></li>
-                <li><a href="#"><b>Álbumes</b></a></li>
-                <li><a href="#"><b>Cantantes</b></a></li>
-                <li><a href="#"><b>Artistas</b></a></li>
-                <li><a href="#"><b>Premios</b></a></li>
+                <li><a href="#inicio"><b>Inicio</b></a></li>
+                <li><a href="#canciones"><b>Canciones</b></a></li>
+                <li><a href="#albumes"><b>Álbumes</b></a></li>
+                <li><a href="#artistas"><b>Artistas</b></a></li>
+                <li><a href="#premios"><b>Premios</b></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div id="carrusel-contenido">
-            <div id="carrusel-caja">
-                <div class="carrusel-elemento">
-                    <img class="imagenes" src="./slider/conciertos1.jpg" >
-                </div>
-                <div class="carrusel-elemento">
-                    <img class="imagenes" src="./slider/piano.jpg" >
-                </div>
-                <div class="carrusel-elemento">
-                    <img class="imagenes" src="./slider/conciertos2.jpg" >
-                </div>
-                <div class="carrusel-elemento">
-                    <img class="imagenes" src="./slider/grammys.jpg" >
+        <section class="hero" id="inicio">
+            <h1>¡Todas las novedades musicales!</h1>
+            <p>Bienvenidos a Musical Culture, tu destino para descubrir lo último en música.</p>
+        </section>
+
+        <!-- Sección de Cards -->
+        <section class="cards">
+            <h2 id="canciones">Canciones del año</h2>
+            <div id="carrusel-contenido">
+                <div id="carrusel-caja">
+                    <div class="carrusel-elemento">
+                        <img src="cancion.jpg" alt="Canción 1">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                    </div>
+                    <div class="carrusel-elemento">
+                        <img src="cancion.jpg" alt="Canción 2">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                    </div>
+                    <div class="carrusel-elemento">
+                        <img src="cancion.jpg" alt="Canción 3">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <section class="hero">
-            <h1>¡Todas las novedades musicales!</h1></p>
-            <p>Bienvenidos a Musical Culture, tu destino para descubrir lo último en música.
-            <p>Explora las tendencias actuales, nuevos artistas y géneros que están definiendo la escena musical hoy.</p>
-            <p>¡Aquí la música nunca se detiene!</p>
         </section>
-
-        <section class="content">
-            <h2>Canciones</h2>
-            <p>Éstas son las canciones del momento.</p>
+        <section class="cards">
+            <h2 id="albumes">Álbumes del año</h2>
+            <div id="carrusel-contenido">
+                <div id="carrusel-caja">
+                    <div class="carrusel-elemento">
+                        <div class="card-info">
+                            <h3>Álbum del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                        <img src="cancion.jpg" alt="Álbum 1">
+                    </div>
+                    <div class="carrusel-elemento">
+                        <div class="card-info">
+                            <h3>Álbum del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                        <img src="cancion.jpg" alt="Álbum 2">
+                    </div>
+                    <div class="carrusel-elemento">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                        <img src="cancion.jpg" alt="Canción 3">
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <section class="content">
-            <h2>Álbumes</h2>
-            <p>Éstos son los álbumes del momento.</p>
+        <section class="cards">
+            <h2 id="artistas">Artistas del año</h2>
+            <div id="carrusel-contenido">
+                <div id="carrusel-caja">
+                    <div class="carrusel-elemento">
+                        <img src="cancion.jpg" alt="Canción 1">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                    </div>
+                    <div class="carrusel-elemento">
+                        <img src="cancion.jpg" alt="Canción 2">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                    </div>
+                    <div class="carrusel-elemento">
+                        <img src="cancion.jpg" alt="Canción 3">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <section class="content">
-            <h2>Cantantes</h2>
-            <p>Éstos son los cantantes del momento.</p>
-        </section>
-
-        <section class="content">
-            <h2>Premios</h2>
-            <p>Éstos son los premios más importantes de la música.</p>
+        <section class="cards">
+            <h2 id="premios">Premios</h2>
+            <div id="carrusel-contenido">
+                <div id="carrusel-caja">
+                    <div class="carrusel-elemento">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                        <img src="cancion.jpg" alt="Canción 1">
+                    </div>
+                    <div class="carrusel-elemento">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                        <img src="cancion.jpg" alt="Canción 2">
+                    </div>
+                    <div class="carrusel-elemento">
+                        <div class="card-info">
+                            <h3>Canción del año</h3>
+                            <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                        </div>
+                        <img src="cancion.jpg" alt="Canción 3">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
