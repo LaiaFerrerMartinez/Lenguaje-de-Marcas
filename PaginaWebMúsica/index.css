@@ -11,7 +11,7 @@ html {
 body {
     font-family: 'Lora', sans-serif;
     line-height: 1.6;
-    background-color: #D3D3D3;
+    background-color: #003366;
     color: #070B5A;
 }
 
@@ -20,7 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #003366;
+    background-color: #01031A;
     color: white;
     padding: 20px;
     height: 75px;
@@ -78,7 +78,7 @@ nav ul li:hover .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #003366;
+    background-color: #01031A;
     padding: 5px 0; /* Reducir padding para menos espacio */
     border-radius: 8px;
     min-width: 200px;
@@ -98,13 +98,13 @@ nav ul li:hover .dropdown-menu {
 }
 
 .dropdown-menu li a:hover {
-    background-color: #003366;
+    background-color: #01031A;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 /* Sección Hero */
 .hero {
-    background-color: #003366;
+    background-color: #01031A;
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -119,7 +119,7 @@ nav ul li:hover .dropdown-menu {
     text-align: center;
     margin-top: 40px;
     font-size: 2.5rem;
-    color: #003366;
+    color: white;
 }
 
 #carrusel-caja {
@@ -137,10 +137,12 @@ nav ul li:hover .dropdown-menu {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    border-color: white;
+    border-width: 2px;
 }
 #carrusel-contenido {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
     overflow: hidden;
     text-align: left;
 }
@@ -150,10 +152,10 @@ nav ul li:hover .dropdown-menu {
     width: 25%;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    border: 5px solid white;
 }
 .carousel-navigation {
     position: absolute;
@@ -165,14 +167,21 @@ nav ul li:hover .dropdown-menu {
 }
 
 .carrusel-elemento img {
-    width: 40%;
+    width: 30%;
     object-fit: cover;
 }
 
 .card-info {
     padding: 15px;
-    width: 60%;
+    width: 70%;
     text-align: center;
+}
+
+.carrusel-elemento .line {
+    width: 3px; /* Ancho de la línea vertical */
+    background-color: #01031A; /* Color de la línea */
+    height: 100%; /* La línea ocupará toda la altura de la card */
+    margin: 0 5px; /* Espacio entre la línea y los elementos */
 }
 
 @-moz-keyframes automatizacion {
@@ -235,7 +244,7 @@ nav ul li:hover .dropdown-menu {
 
 /* Pie de página */
 footer {
-    background-color: #070B5A;
+    background-color: #01031A;
     color: white;
     text-align: center;
     padding: 10px 0;
