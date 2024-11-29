@@ -118,7 +118,8 @@ nav ul li:hover .dropdown-menu {
 .cards h2 {
     text-align: center;
     margin-top: 40px;
-    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-size: 3.5rem;
     color: white;
 }
 
@@ -140,6 +141,7 @@ nav ul li:hover .dropdown-menu {
     border-color: white;
     border-width: 2px;
 }
+
 #carrusel-contenido {
     margin-left: 100px;
     margin-right: 100px;
@@ -156,7 +158,11 @@ nav ul li:hover .dropdown-menu {
     display: flex;
     flex-direction: row;
     border: 5px solid white;
+    /* Mantener la altura predeterminada de la tarjeta */
+    min-height: 300px; /* Cambia este valor si quieres que sea más grande o más pequeño */
+    justify-content: center;
 }
+
 .carousel-navigation {
     position: absolute;
     top: 50%;
@@ -171,15 +177,30 @@ nav ul li:hover .dropdown-menu {
     object-fit: cover;
 }
 
+/* Centrar los párrafos verticalmente sin cambiar el tamaño de la card */
 .card-info {
     padding: 15px;
     width: 70%;
     text-align: center;
+    display: flex;
+    flex-direction: column;   /* Alinear los párrafos de forma vertical */
+    align-items: center;      /* Alinear los elementos horizontalmente al centro */
+    height: 100%;             /* Utilizar toda la altura disponible de la card */
+    margin: 50px;
+}
+
+.card-info h3 {
+    font-size: 2.25rem;
+}
+
+.card-info p {
+    font-size: 1.75rem;         /* Ajusta el tamaño del texto según lo necesites */
+    margin-top: 10px; /* Reduce el margen inferior entre párrafos */
 }
 
 .carrusel-elemento .line {
     width: 3px; /* Ancho de la línea vertical */
-    background-color: #01031A; /* Color de la línea */
+    background-color: #003366; /* Color de la línea */
     height: 100%; /* La línea ocupará toda la altura de la card */
     margin: 0 5px; /* Espacio entre la línea y los elementos */
 }
