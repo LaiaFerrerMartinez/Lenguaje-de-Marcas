@@ -14,8 +14,15 @@
             <span class="nombre">Musical Culture</span>
         </div>
         <nav>
-            <ul>
-                <li><a href="#inicio"><b>Inicio</b></a></li>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <ul id="menu" class="menu-items">
+                <li class="dropdown"><a href="#inicio"><b>Inicio</b></a></li>
                 <li class="dropdown">
                     <a href="#canciones"><b>Canciones</b></a>
                     <ul class="dropdown-menu">
@@ -84,6 +91,10 @@
     </header>
     
     <main>
+        <video class="video-bg" autoplay muted loop>
+            <source src="musica.mp4" type="video/mp4">
+        </video>
+
         <section class="hero">
             <h1>¡Todas las novedades musicales!</h1>
             <p>Bienvenidos a Musical Culture, tu destino para descubrir lo último en música.</p>
@@ -99,7 +110,7 @@
                         <div class="line"></div>
                         <div class="card-info">
                             <h3>"Espresso" - Sabrina Carpenter</h3>
-                            <p>"Espresso" es una de las cancion más reconocidas de la cantautora estadounidense Sabrina Carpenter.</p>
+                            <p>"Espresso" es una de las canciones más reconocidas de la cantautora estadounidense Sabrina Carpenter.</p>
                             <p>Fue lanzada el 11 de abril de 2024 como el sencillo principal de su sexto álbum de estudio, "Short' n Sweet".</p>
                             <p>La canción fue escrita por Sabrina, además de Amy Allen, Steph Jones y Julian Bunetta, quien también se encargó de la producción.</p>
                         </div>
