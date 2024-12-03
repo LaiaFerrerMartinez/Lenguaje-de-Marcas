@@ -340,14 +340,6 @@ nav ul li:hover::after {
     }
 }
 
-/* Pie de página */
-footer {
-    background-color: #01031A;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
 .menu-icon {
     display: none; /* El ícono también está oculto por defecto */
     flex-direction: column;
@@ -547,7 +539,17 @@ footer {
     .cards {
         margin-bottom: 35px;
     }
-  }
+
+    .footer-nav ul {
+        flex-direction: column;
+    }
+
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
   
   /* En pantallas grandes, el menú es horizontal */
   @media (min-width: 769px) {
@@ -646,49 +648,79 @@ footer {
     }
 }
 
-/* Estilo del footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 10px;
-    text-align: center;
+footer {
+    background-color: #01031A;
 }
 
 .footer-container {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.social-icons {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
 }
 
-.footer-links a,
-.footer-socials a {
-    color: #ff9800;
+.social-icons a {
     text-decoration: none;
-    margin: 5px 10px;
-    font-size: 14px;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex; /* Hace que el contenedor sea flexible */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 50px; /* Ajusta según el tamaño deseado */
+    height: 50px; /* Asegura que el contenedor sea cuadrado */
 }
 
-.footer-links a:hover,
-.footer-socials a:hover {
-    text-decoration: underline;
+.social-icons a i {
+    font-size: 2em;
+    color: #01031A;
+    opacity: 0.9;
+    margin: 0; /* Elimina márgenes que puedan desalinear */
 }
 
-.footer-copy {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #ccc;
+.social-icons a:hover {
+    background-color: #003366;
+    transition: 0.5s;
 }
 
-/* Diseño responsivo */
-@media (min-width: 768px) {
-    .footer-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .footer-links,
-    .footer-socials {
-        display: flex;
-    }
+.social-icons a:hover i {
+    color: white;
+    transition: 0.5s;
 }
+
+.footer-nav {
+    margin: 30px 0;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-nav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: 0.5s;
+}
+
+.footer-nav ul li a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.footer-bottom {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+}
+
