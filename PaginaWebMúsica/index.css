@@ -273,14 +273,13 @@ nav ul li:hover::after {
     margin: 0 5px; /* Espacio entre la línea y los elementos */
 }
 
-.lineVertical {
+.lineHorizontal {
     width: 80%; /* Ancho de la línea vertical */
     background-color: white; /* Color de la línea */
     height: 2px; /* La línea ocupará toda la altura de la card */
     margin-left: 10%; /* Espacio entre la línea y los elementos */
     margin-right: 10%;
-    margin-top: 40px;
-
+    box-shadow: 0 4px 6px #01031A;
 }
 
 @-moz-keyframes automatizacion {
@@ -499,6 +498,7 @@ footer {
     
     .cards h2 {
         font-size: 2.25rem;
+        margin-top: 20px;
     }
     
     #carrusel-contenido {
@@ -542,6 +542,10 @@ footer {
         background-color: #003366; /* Color de la línea */
         height: 100%; /* La línea ocupará toda la altura de la card */
         margin: 0 3px; /* Espacio entre la línea y los elementos */
+    }
+
+    .cards {
+        margin-bottom: 35px;
     }
   }
   
