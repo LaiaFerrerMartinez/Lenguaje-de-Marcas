@@ -183,6 +183,7 @@ nav ul li:hover::after {
     margin-bottom: 15px;
     font-size: 3.5rem;
     color: white;
+    text-shadow: 3px 3px 6px #01031A;
 }
 
 #carrusel-caja {
@@ -221,7 +222,7 @@ nav ul li:hover::after {
     flex-direction: row;
     border: 5px solid white;
     /* Mantener la altura predeterminada de la tarjeta */
-    min-height: 300px; /* Cambia este valor si quieres que sea más grande o más pequeño */
+    height: 475px; /* Cambia este valor si quieres que sea más grande o más pequeño */
     justify-content: center;
 }
 
@@ -237,6 +238,10 @@ nav ul li:hover::after {
 .carrusel-elemento img {
     width: 30%;
     object-fit: cover;
+}
+
+.cards {
+    margin-bottom: 70px;
 }
 
 /* Centrar los párrafos verticalmente sin cambiar el tamaño de la card */
@@ -258,6 +263,7 @@ nav ul li:hover::after {
 .card-info p {
     font-size: 1.75rem;         /* Ajusta el tamaño del texto según lo necesites */
     margin-top: 10px; /* Reduce el margen inferior entre párrafos */
+    justify-content: space-around;
 }
 
 .carrusel-elemento .line {
@@ -265,6 +271,16 @@ nav ul li:hover::after {
     background-color: #003366; /* Color de la línea */
     height: 100%; /* La línea ocupará toda la altura de la card */
     margin: 0 5px; /* Espacio entre la línea y los elementos */
+}
+
+.lineVertical {
+    width: 80%; /* Ancho de la línea vertical */
+    background-color: white; /* Color de la línea */
+    height: 2px; /* La línea ocupará toda la altura de la card */
+    margin-left: 10%; /* Espacio entre la línea y los elementos */
+    margin-right: 10%;
+    margin-top: 40px;
+
 }
 
 @-moz-keyframes automatizacion {
@@ -379,7 +395,7 @@ footer {
   .menu-items .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #003366;
+    background-color: #01031A;
   }
   
   .menu-items li:hover .dropdown-menu {
@@ -407,11 +423,19 @@ footer {
       display: block;
     }
 
-    .dropdown-menu li{
+    .dropdown-menu li {
         position: relative;
-        padding-left: 20px; /* Espacio a la izquierda para la línea */
-        border-left: 3px solid white; /* Línea blanca visible siempre */
-        border-bottom: 3px solid white; /* Línea blanca visible siempre */
+        padding-left: 15px; /* Espacio para la línea */
+    }
+    
+    .dropdown-menu li::before {
+        content: '';
+        position: absolute;
+        left: 0; /* Ubicación de la línea */
+        top: 5%; /* Ajusta la posición vertical de la línea */
+        height: 90%; /* Altura de la línea relativa al elemento */
+        width: 3px; /* Ancho de la línea */
+        background-color: white; /* Color de la línea */
     }
   
     .dropdown:hover .dropdown-menu {
@@ -459,6 +483,65 @@ footer {
     /* Eliminar efectos no deseados al interactuar con enlaces */
     nav ul li a:hover {
         background-color: transparent; /* Sin cambios visuales */
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .cards h2 {
+        font-size: 2.25rem;
+    }
+    
+    #carrusel-contenido {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .carrusel-elemento {
+        height: 130px;
+        border: 3px white solid;
+    }
+    
+    .carrusel-elemento img {
+        width: 30%;
+        object-fit: cover;
+    }
+    
+    /* Centrar los párrafos verticalmente sin cambiar el tamaño de la card */
+    .card-info {
+        padding: 0;
+        width: 70%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;   /* Alinear los párrafos de forma vertical */
+        align-items: center;      /* Alinear los elementos horizontalmente al centro */
+        height: 100%;             /* Utilizar toda la altura disponible de la card */
+        margin: 5px;
+    }
+    
+    .card-info h3 {
+        font-size: 0.8rem;
+    }
+    
+    .card-info p {
+        font-size: 0.65rem;         /* Ajusta el tamaño del texto según lo necesites */
+        margin-top: 2px; /* Reduce el margen inferior entre párrafos */
+    }
+    
+    .carrusel-elemento .line {
+        width: 2px; /* Ancho de la línea vertical */
+        background-color: #003366; /* Color de la línea */
+        height: 100%; /* La línea ocupará toda la altura de la card */
+        margin: 0 3px; /* Espacio entre la línea y los elementos */
     }
   }
   
@@ -558,3 +641,4 @@ footer {
         display: none;
     }
 }
+
