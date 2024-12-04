@@ -654,7 +654,7 @@ footer {
 
 .footer-container {
     width: 100%;
-    padding: 70px 30px 20px;
+    padding: 45px 30px 35px;
 }
 
 .social-icons {
@@ -685,16 +685,16 @@ footer {
 
 .social-icons a:hover {
     background-color: #003366;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .social-icons a:hover i {
     color: white;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .footer-nav {
-    margin: 30px 0;
+    margin: 30px 0 10px;
 }
 
 .footer-nav ul {
@@ -708,7 +708,7 @@ footer {
     margin: 20px;
     text-decoration: none;
     font-size: 1.3em;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .footer-nav ul li a:hover {
@@ -716,7 +716,7 @@ footer {
 }
 
 .footer-bottom {
-    padding: 20px;
+    padding-bottom: 0;
     text-align: center;
 }
 
