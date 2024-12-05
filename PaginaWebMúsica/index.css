@@ -17,6 +17,11 @@ body {
 
 /* Cabecera */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +29,9 @@ header {
     color: white;
     padding: 20px;
     height: 95px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacarlo */
 }
+
 
 .logo-nombre {
     display: flex;
@@ -142,7 +149,7 @@ nav ul li:hover::after {
     width: 100%;
     height: auto;
     margin: 0;
-    padding: 0;
+    padding-top: 95px;
     display: block;
     overflow: hidden;
     object-fit: cover;
@@ -179,11 +186,11 @@ nav ul li:hover::after {
 
 .cards h2 {
     text-align: center;
-    margin-top: 40px;
     margin-bottom: 15px;
     font-size: 3.5rem;
     color: white;
     text-shadow: 3px 3px 6px #01031A;
+    margin-top: 40px;
 }
 
 #carrusel-caja {
@@ -206,8 +213,8 @@ nav ul li:hover::after {
 }
 
 #carrusel-contenido {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
     overflow: hidden;
     text-align: left;
 }
@@ -264,6 +271,7 @@ nav ul li:hover::after {
     font-size: 1.75rem;         /* Ajusta el tamaño del texto según lo necesites */
     margin-top: 10px; /* Reduce el margen inferior entre párrafos */
     justify-content: space-around;
+    text-align: justify;
 }
 
 .carrusel-elemento .line {
@@ -280,6 +288,8 @@ nav ul li:hover::after {
     margin-left: 10%; /* Espacio entre la línea y los elementos */
     margin-right: 10%;
     box-shadow: 0 4px 6px #01031A;
+    margin-bottom: 135px;
+    
 }
 
 @-moz-keyframes automatizacion {
@@ -408,10 +418,12 @@ nav ul li:hover::after {
     /* Al activar el checkbox, se muestra el menú */
     .menu-toggle:checked + .menu-icon + .menu-items {
       display: block;
+      align-items: right;
     }
   
     .dropdown {
       display: block;
+      right: 0;
     }
 
     .dropdown-menu li {
@@ -549,6 +561,16 @@ nav ul li:hover::after {
         text-align: center;
         margin: 10px;
     }
+
+    .logo-nombre {
+        display: flex;
+        align-items: left;
+        gap: 10px;
+        margin-top: 25px;
+        margin-left: 0;
+        margin-bottom: 25px;
+        padding-left: 0;
+    }
 }
   
   /* En pantallas grandes, el menú es horizontal */
@@ -654,7 +676,7 @@ footer {
 
 .footer-container {
     width: 100%;
-    padding: 45px 30px 35px;
+    padding: 20px 30px 10px;
 }
 
 .social-icons {
@@ -694,11 +716,13 @@ footer {
 }
 
 .footer-nav {
-    margin: 30px 0 10px;
+    margin: 0 0 10px;
 }
 
 .footer-nav ul {
     display: flex;
+    margin-top: 10px;
+    margin-bottom: 15px;
     justify-content: center;
     list-style: none;
 }
@@ -723,4 +747,3 @@ footer {
 .footer-bottom p {
     color: white;
 }
-

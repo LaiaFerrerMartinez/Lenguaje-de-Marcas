@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards con Flexbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="inicio">
+        <div class="logo-nombre">
+            <img class="logo" src="logo.png" alt="Logo de la empresa">
+            <span class="nombre">Musical Culture</span>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <ul id="menu" class="menu-items">
+                <li class="dropdown"><a href="#inicio"><b>Inicio</b></a></li>
+                <li class="dropdown">
+                    <a href="#canciones"><b>Canciones</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">Antes del 2023</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#albumes"><b>Álbumes</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">Antes del 2023</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#artistas"><b>Artistas</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">Antes del 2023</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#videoclips"><b>Videoclips</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">Antes del 2023</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#giras"><b>Giras</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">2024</a></li>
+                        <li><a href="#">2023</a></li>
+                        <li><a href="#">Antes del 2023</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#premios"><b>Premios</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.grammy.com/">Grammy Awards</a></li>
+                        <li><a href="https://www.brits.co.uk/">BRIT Awards</a></li>
+                        <li><a href="https://www.mtv.com/vma">MTV VMAs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cards">
+            <h2>Canciones del 2024</h2>
+            <div class="flex-container">
+                <div class="card">
+                    <img src="cancion.jpg" alt="Persona 1">
+                    <div class="card-info">
+                        <h3>Canción del año</h3>
+                        <p>Canción del año: "Love Somebody" de Morgan Wallen</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="album.jpg" alt="Persona 2">
+                    <div class="card-info">
+                        <h3>Álbum del año</h3>
+                        <p>Álbum del año: "Short n' Sweet" de Sabrina Carpenter</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="cantante.jpg" alt="Persona 3">
+                    <div class="card-info">
+                        <h3>Cantante del año</h3>
+                        <p>Cantante del año: Taylor Swift</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Sitio Web</p>
+    </footer>
+</body>
+</html>

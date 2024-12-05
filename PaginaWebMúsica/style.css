@@ -1,0 +1,522 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lora', sans-serif;
+    line-height: 1.6;
+    background-color: #003366;
+    color: #070B5A;
+}
+
+/* Cabecera */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #01031A;
+    color: white;
+    padding: 20px;
+    height: 95px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacarlo */
+}
+
+
+.logo-nombre {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.logo-nombre .logo {
+    height: 62px;
+}
+
+.logo-nombre .nombre {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Mayor espacio entre los elementos principales */
+    margin-right: 75px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px; /* Reducción de padding para menos separación */
+    transition: text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Menú desplegable */
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: #01031A;
+    padding: 5px 0; /* Reducir padding para menos espacio */
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+}
+
+.dropdown-menu li {
+    margin: 0; /* Eliminar margen para reducir espacio entre opciones */
+}
+
+.dropdown-menu li a {
+    color: white;
+    padding: 10px 15px; /* Ajustar padding de los elementos secundarios */
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #01031A;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+nav ul li {
+    position: relative; /* Base para posicionar los elementos del menú */
+}
+
+.dropdown-menu {
+    display: none; /* Por defecto, oculto */
+    position: absolute;
+    top: 100%; /* Aparece justo debajo del elemento principal */
+    left: 0;
+    background-color: #01031A;
+    padding: 10px 0;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Asegura que esté sobre el video */
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block; /* Aparece cuando el cursor está sobre el li */
+}
+
+nav ul li:hover::after {
+    content: ''; /* Pseudo-elemento para ampliar el área activa */
+    position: absolute;
+    top: 100%; /* Justo debajo del menú */
+    left: 0;
+    width: 100%;
+    height: 20px; /* Extiende el área activa 20px */
+    background: transparent; /* Invisible */
+}
+
+
+.menu-icon {
+    display: none; /* El ícono también está oculto por defecto */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+
+
+@media (max-width: 768px) {
+   
+    /* Menú desplegable mobile-first */
+  .menu-items {
+    display: block;
+    background-color: #01031A;
+    width: 100%;
+    position: absolute;
+    padding-top: 10px;
+    margin: 0;
+    z-index: 9;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 95px;
+  }
+  
+  .menu-items .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #01031A;
+  }
+  
+  .menu-items li:hover .dropdown-menu {
+    display: block;
+    justify-content: right;
+  }
+  
+  /* Mostrar el menú y las subopciones en móviles */
+
+    .menu-items {
+      display: none;
+      width: 200px;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  
+    /* Al activar el checkbox, se muestra el menú */
+    .menu-toggle:checked + .menu-icon + .menu-items {
+      display: block;
+    }
+  
+    .dropdown {
+      display: block;
+    }
+
+    .dropdown-menu li {
+        position: relative;
+        padding-left: 15px; /* Espacio para la línea */
+    }
+    
+    .dropdown-menu li::before {
+        content: '';
+        position: absolute;
+        left: 0; /* Ubicación de la línea */
+        top: 5%; /* Ajusta la posición vertical de la línea */
+        height: 90%; /* Altura de la línea relativa al elemento */
+        width: 3px; /* Ancho de la línea */
+        background-color: white; /* Color de la línea */
+    }
+  
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Menú principal en una columna */
+        align-items: flex-start; /* Alineación del texto a la izquierda */
+        width: 100%; /* Ocupa todo el ancho */
+        position: relative;
+    }
+
+    nav ul li {
+        position: relative; /* Para que cada li sea un contenedor de su dropdown */
+        width: 100%; /* El li ocupa todo el ancho del menú */
+    }
+
+    nav ul li a {
+        display: block; /* Asegura que los enlaces ocupen toda la línea */
+        width: 100%;
+        padding: 15px;
+        text-align: left;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-menu {
+        position: absolute;
+        top: 0; /* Alineado verticalmente con su padre */
+        left: 100%; /* Justo a la derecha del elemento principal */
+        background-color: #070B5A;
+        border-radius: 0;
+        min-width: 150px;
+        display: none; /* Oculto por defecto */
+        z-index: 11;
+        padding: 0;
+    }
+
+    /* Mostrar dropdown al interactuar */
+    nav ul li:hover .dropdown-menu,
+    nav ul li:focus-within .dropdown-menu {
+        display: block;
+    }
+
+    /* Eliminar efectos no deseados al interactuar con enlaces */
+    nav ul li a:hover {
+        background-color: transparent; /* Sin cambios visuales */
+    }
+}
+  
+  /* En pantallas grandes, el menú es horizontal */
+  @media (min-width: 769px) {
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px; /* Mayor espacio entre los elementos principales */
+        margin-right: 75px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    nav ul li {
+        position: relative;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 15px; /* Reducción de padding para menos separación */
+        transition: text-shadow 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    
+    /* Menú desplegable */
+    nav ul li:hover .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu {
+        display: none;
+        position: relative;
+        top: 100%;
+        left: 0;
+        background-color: #01031A;
+        padding: 5px 0; /* Reducir padding para menos espacio */
+        border-radius: 8px;
+        min-width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 0;
+    }
+    
+    .dropdown-menu li {
+        margin: 0; /* Eliminar margen para reducir espacio entre opciones */
+    }
+    
+    .dropdown-menu li a {
+        color: white;
+        padding: 10px 15px; /* Ajustar padding de los elementos secundarios */
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-menu li a:hover {
+        background-color: #01031A;
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    
+    nav ul li {
+        position: relative; /* Base para posicionar los elementos del menú */
+    }
+    
+    .dropdown-menu {
+        display: none; /* Por defecto, oculto */
+        position: absolute;
+        top: 100%; /* Aparece justo debajo del elemento principal */
+        left: 0;
+        background-color: #01031A;
+        padding: 10px 0;
+        border-radius: 8px;
+        min-width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 10; /* Asegura que esté sobre el video */
+    }
+    
+    nav ul li:hover .dropdown-menu {
+        display: block; /* Aparece cuando el cursor está sobre el li */
+    }
+    
+    nav ul li:hover::after {
+        content: ''; /* Pseudo-elemento para ampliar el área activa */
+        position: absolute;
+        top: 100%; /* Justo debajo del menú */
+        left: 0;
+        width: 100%;
+        height: 20px; /* Extiende el área activa 20px */
+        background: transparent; /* Invisible */
+    }
+
+    .menu-toggle, -menu-icon {
+        display: none;
+    }
+}
+
+
+/* Galería de Imágenes */
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex: 1 1 30%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Cards */
+.cards h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 3px 3px 6px #01031A;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.flex-container {
+    margin: 75px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 600px) {
+
+    .gallery h2 {
+        font-size: 2.5rem;
+    }
+
+    .flex-container {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 30%; /* En pantallas más grandes, las cards ocupan el 30% */
+    }
+
+    .gallery-item {
+        flex: 1 1 30%;
+    }
+}
+
+@media (min-width: 900px) {
+    .cards h2 {
+        font-size: 3rem;
+    }
+
+    .gallery h2 {
+        font-size: 3rem;
+    }
+
+    .flex-container {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+    .gallery-item {
+        flex: 1 1 30%;
+    }
+}
+
+main {
+    padding: 20px;
+    padding-top: 95px;
+}
