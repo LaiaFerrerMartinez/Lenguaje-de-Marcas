@@ -387,10 +387,10 @@ nav ul li:hover::after {
     padding-top: 10px;
     margin: 0;
     z-index: 9;
-    left: 0;
     flex-direction: column;
     align-items: flex-start;
     top: 95px;
+    right: 0;
   }
   
   .menu-items .dropdown-menu {
@@ -424,6 +424,7 @@ nav ul li:hover::after {
     .dropdown {
       display: block;
       right: 0;
+      position: relative;
     }
 
     .dropdown-menu li {
@@ -468,13 +469,13 @@ nav ul li:hover::after {
     .dropdown-menu {
         position: absolute;
         top: 0; /* Alineado verticalmente con su padre */
-        left: 100%; /* Justo a la derecha del elemento principal */
         background-color: #070B5A;
         border-radius: 0;
         min-width: 150px;
         display: none; /* Oculto por defecto */
         z-index: 11;
         padding: 0;
+        left: -100%;
     }
 
     /* Mostrar dropdown al interactuar */
