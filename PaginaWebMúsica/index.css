@@ -162,13 +162,18 @@ nav ul li:hover::after {
     object-fit: cover;
 }
 
+.cambio-color {
+    background-color: #004891;
+}
+
 /* Sección Hero */
 .hero {
     background-color: #01031A;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px;
     margin-top: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacarlo */
 }
 
 .hero h1 {
@@ -181,7 +186,7 @@ nav ul li:hover::after {
 
 /* Slider de Cards */
 .cards {
-    margin-bottom: 50px;
+    padding-bottom: 0;
 }
 
 .cards h2 {
@@ -190,7 +195,7 @@ nav ul li:hover::after {
     font-size: 3.5rem;
     color: white;
     text-shadow: 3px 3px 6px #01031A;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 #carrusel-caja {
@@ -243,24 +248,20 @@ nav ul li:hover::after {
 }
 
 .carrusel-elemento img {
-    width: 30%;
+    width: 40%;
     object-fit: cover;
-}
-
-.cards {
-    margin-bottom: 70px;
 }
 
 /* Centrar los párrafos verticalmente sin cambiar el tamaño de la card */
 .card-info {
     padding: 15px;
-    width: 70%;
+    width: 60%;
     text-align: center;
     display: flex;
     flex-direction: column;   /* Alinear los párrafos de forma vertical */
     align-items: center;      /* Alinear los elementos horizontalmente al centro */
     height: 100%;             /* Utilizar toda la altura disponible de la card */
-    margin: 50px;
+    margin: 30px;
 }
 
 .card-info h3 {
@@ -288,8 +289,8 @@ nav ul li:hover::after {
     margin-left: 10%; /* Espacio entre la línea y los elementos */
     margin-right: 10%;
     box-shadow: 0 4px 6px #01031A;
-    margin-bottom: 135px;
-    
+    margin-bottom: 90px;
+    margin-top: 70px;
 }
 
 @-moz-keyframes automatizacion {
@@ -376,6 +377,10 @@ nav ul li:hover::after {
     .video-bg {
         height: auto; /* Usa un porcentaje del alto de la ventana */
         width: 100%;
+    }
+
+    .lineHorizontal {
+        margin-bottom: 30px;
     }
 
     /* Menú desplegable mobile-first */
@@ -553,6 +558,12 @@ nav ul li:hover::after {
         margin-bottom: 35px;
     }
 
+    .espacio {
+        height: 70px;
+        width: 100%;
+        background-color: #004891;
+    }
+
     .footer-nav ul {
         flex-direction: column;
     }
@@ -579,7 +590,7 @@ nav ul li:hover::after {
     nav ul {
         list-style: none;
         display: flex;
-        gap: 30px; /* Mayor espacio entre los elementos principales */
+    gap: 30px; /* Mayor espacio entre los elementos principales */
         margin-right: 75px;
         margin-top: 25px;
         margin-bottom: 25px;
