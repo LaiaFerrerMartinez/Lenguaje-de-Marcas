@@ -501,6 +501,16 @@ footer {
     .gallery-item {
         flex: 1 1 30%;
     }
+
+    .footer-nav ul {
+        flex-direction: column;
+    }
+
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
 }
 
 @media (min-width: 900px) {
@@ -528,4 +538,82 @@ footer {
 main {
     padding: 20px;
     padding-top: 95px;
+}
+
+footer {
+    background-color: #01031A;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 20px 30px 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex; /* Hace que el contenedor sea flexible */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 50px; /* Ajusta según el tamaño deseado */
+    height: 50px; /* Asegura que el contenedor sea cuadrado */
+}
+
+.social-icons a i {
+    font-size: 2em;
+    color: #01031A;
+    opacity: 0.9;
+    margin: 0; /* Elimina márgenes que puedan desalinear */
+}
+
+.social-icons a:hover {
+    background-color: #003366;
+    transition: 0.3s;
+}
+
+.social-icons a:hover i {
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-nav {
+    margin: 0 0 10px;
+}
+
+.footer-nav ul {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-nav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.footer-bottom {
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
 }
