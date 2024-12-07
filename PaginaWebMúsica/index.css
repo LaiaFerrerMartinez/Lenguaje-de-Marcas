@@ -186,7 +186,7 @@ nav ul li:hover::after {
 
 /* Slider de Cards */
 .cards {
-    padding-bottom: 0;
+    padding-bottom: 35px;
 }
 
 .cards h2 {
