@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -476,44 +477,10 @@ nav ul li:hover::after {
     color: #01031A;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
+
 
 /* Media Queries para pantallas grandes */
-@media (min-width: 600px) {
-
-    .gallery h2 {
-        font-size: 2.5rem;
-    }
-
-    .flex-container {
-        justify-content: space-between;
-    }
-
-    .card {
-        width: 30%; /* En pantallas más grandes, las cards ocupan el 30% */
-    }
-
-    .gallery-item {
-        flex: 1 1 30%;
-    }
-
-    .footer-nav ul {
-        flex-direction: column;
-    }
-
-    .footer-nav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 10px;
-    }
-}
-
-@media (min-width: 900px) {
+@media (min-width: 769px) {
     .cards h2 {
         font-size: 3rem;
     }
@@ -527,17 +494,276 @@ footer {
     }
 
     .card {
-        width: 30%;
+        width: 70%;
     }
 
     .gallery-item {
         flex: 1 1 30%;
     }
+
+    .card {
+        width: 30%; /* En pantallas más grandes, las cards ocupan el 30% */
+    }
+}
+
+@media (max-width: 768px) {  
+    .gallery h2 {
+        font-size: 2.5rem;
+    }
+
+    .cards h2 {
+        font-size: 2.5rem;        
+    }
+
+    .logo-nombre {
+        display: flex;
+        align-items: left;
+        gap: 10px;
+        margin-top: 25px;
+        margin-left: 0;
+        margin-bottom: 25px;
+        padding-left: 0;
+    }
+
+    .card {
+        align-items: center;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .flex-container {
+        margin-left: 0;
+        gap: 75px;
+    }
+
+    .card img {
+        width: 98%;
+        height: 98%;
+    }
+
+    .gallery-item {
+        flex: 1 1 30%;
+    }
+
+    .card {
+        justify-content: center; /* Centra horizontalmente en pantallas pequeñas */
+        align-items: center; /* Centra verticalmente si es necesario */
+        margin-left: 0;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+        height: 100%; /* Ajusta la altura al contenedor */
+        width: 100%; /* Ocupa el ancho disponible */
+    } 
 }
 
 main {
     padding: 20px;
     padding-top: 95px;
+}
+
+.logo-nombre {
+    display: flex;
+    align-items: left;
+    gap: 10px;
+    margin-top: 25px;
+    margin-left: 0;
+    margin-bottom: 25px;
+    padding-left: 0;
+}
+
+
+/* En pantallas grandes, el menú es horizontal */
+@media (min-width: 769px) {
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Mayor espacio entre los elementos principales */
+    margin-right: 75px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px; /* Reducción de padding para menos separación */
+    transition: text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Menú desplegable */
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: #01031A;
+    padding: 5px 0; /* Reducir padding para menos espacio */
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+}
+
+.dropdown-menu li {
+    margin: 0; /* Eliminar margen para reducir espacio entre opciones */
+}
+
+.dropdown-menu li a {
+    color: white;
+    padding: 10px 15px; /* Ajustar padding de los elementos secundarios */
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #01031A;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+nav ul li {
+    position: relative; /* Base para posicionar los elementos del menú */
+}
+
+.dropdown-menu {
+    display: none; /* Por defecto, oculto */
+    position: absolute;
+    top: 100%; /* Aparece justo debajo del elemento principal */
+    left: 0;
+    background-color: #01031A;
+    padding: 10px 0;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Asegura que esté sobre el video */
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block; /* Aparece cuando el cursor está sobre el li */
+}
+
+nav ul li:hover::after {
+    content: ''; /* Pseudo-elemento para ampliar el área activa */
+    position: absolute;
+    top: 100%; /* Justo debajo del menú */
+    left: 0;
+    width: 100%;
+    height: 20px; /* Extiende el área activa 20px */
+    background: transparent; /* Invisible */
+}
+
+.menu-toggle, -menu-icon {
+    display: none;
+}
+}
+
+footer {
+background-color: #01031A;
+}
+
+.footer-container {
+width: 100%;
+padding: 20px 30px 10px;
+}
+
+.social-icons {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.social-icons a {
+text-decoration: none;
+padding: 10px;
+background-color: white;
+margin: 10px;
+border-radius: 50%;
+display: flex; /* Hace que el contenedor sea flexible */
+justify-content: center; /* Centra el contenido horizontalmente */
+align-items: center; /* Centra el contenido verticalmente */
+width: 50px; /* Ajusta según el tamaño deseado */
+height: 50px; /* Asegura que el contenedor sea cuadrado */
+}
+
+.social-icons a i {
+font-size: 2em;
+color: #01031A;
+opacity: 0.9;
+margin: 0; /* Elimina márgenes que puedan desalinear */
+}
+
+.social-icons a:hover {
+background-color: #003366;
+transition: 0.3s;
+}
+
+.social-icons a:hover i {
+color: white;
+transition: 0.3s;
+}
+
+.footer-nav {
+margin: 0 50px 10px;
+}
+
+.footer-nav ul {
+display: flex;
+margin-top: 10px;
+margin-bottom: 15px;
+justify-content: center;
+list-style: none;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.footer-nav ul li a {
+color: white;
+margin: 20px;
+text-decoration: none;
+font-size: 1.3em;
+transition: 0.3s;
+}
+
+.footer-nav ul li a:hover {
+text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.footer-bottom {
+padding-bottom: 0;
+text-align: center;
+}
+
+.footer-bottom p {
+color: white;
+}
+
+@media (max-width: 768px) {
+    .footer-nav ul {
+        flex-direction: column;
+    }
+
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
 }
 
 footer {
@@ -595,11 +821,14 @@ footer {
     margin-bottom: 15px;
     justify-content: center;
     list-style: none;
+    margin-left: 75px;
+    margin-right: 75px;
 }
 
 .footer-nav ul li a {
     color: white;
     margin: 20px;
+    margin-left: 15px;
     text-decoration: none;
     font-size: 1.3em;
     transition: 0.3s;
