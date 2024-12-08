@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards con Flexbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header id="inicio">
+        <div class="logo-nombre">
+            <img class="logo" src="logo.png" alt="Logo de la empresa">
+            <span class="nombre">Musical Culture</span>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <ul id="menu" class="menu-items">
+                <li class="dropdown"><a href="index.html"><b>Inicio</b></a></li>
+                <li class="dropdown">
+                    <a href="#canciones"><b>Canciones</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="canciones2024.html">2024</a></li>
+                        <li><a href="canciones2023.html">2023</a></li>
+                        <li><a href="canciones2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#albumes"><b>Álbumes</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="albumes2024.html">2024</a></li>
+                        <li><a href="albumes2023.html">2023</a></li>
+                        <li><a href="albumes2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#artistas"><b>Artistas</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="artistas2024.html">2024</a></li>
+                        <li><a href="artistas2023.html">2023</a></li>
+                        <li><a href="artistas2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#videoclips"><b>Videoclips</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="videoclips2024.html">2024</a></li>
+                        <li><a href="videoclips2023.html">2023</a></li>
+                        <li><a href="videoclips2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#giras"><b>Giras</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giras2024.html">2024</a></li>
+                        <li><a href="giras2023.html">2023</a></li>
+                        <li><a href="giras2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#premios"><b>Premios</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.grammy.com/">Grammy Awards</a></li>
+                        <li><a href="https://www.brits.co.uk/">BRIT Awards</a></li>
+                        <li><a href="https://www.mtv.com/vma">MTV VMAs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cards">
+            <h2>Álbumes del 2023</h2>
+            <div class="flex-container">
+                <a href="https://open.spotify.com/intl-es/album/1xJHno7SmdVtZAtXbdbDZp?si=zFx_6etAR5evSx0rwBgrhA" class="card">
+                    <img src="img/albumes/guts.jpg" alt="Álbum 1">
+                    <div class="card-info">
+                        <h3>GUTS</h3>
+                        <p>Olivia Rodrigo</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/album/6PbnGueEO6LGodPfvNldYf?si=pc-KJcxNQT6jOT5C3T1XJw" class="card">
+                    <img src="img/albumes/zach-bryan.jpg" alt="Álbum 2">
+                    <div class="card-info">
+                        <h3>Zach Bryan</h3>
+                        <p>Zach Bryan</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/album/4kS7bSuU0Jm9LYMosFU2x5?si=qOouFAP0T1q-wn_dmlccZQ" class="card">
+                    <img src="img/albumes/msb.jpg" alt="Álbum 3">
+                    <div class="card-info">
+                        <h3>MAÑANA SERÁ BONITO</h3>
+                        <p>Karol G</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-container">
+                <a href="https://open.spotify.com/intl-es/album/6DmPNcfpkXBVRJsEIJY9tl?si=ZpVRgaz3Ty-mtbABvXJibw" class="card">
+                    <img src="img/albumes/scarlet.jpg" alt="Álbum 4">
+                    <div class="card-info">
+                        <h3>Scarlet</h3>
+                        <p>Doja Cat</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/album/3RqO05jxT9YYgNtMdQmo8Z?si=sL0yWr09QDG3axK6Edkh_g" class="card">
+                    <img src="img/albumes/snow-angel.jpg" alt="Álbum 5">
+                    <div class="card-info">
+                        <h3>Snow Angel</h3>
+                        <p>Renée Rapp</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/album/4jox3ip1I39DFC2B7R5qLH?si=hx2qAHG3QH6pujPSKzpT2Q" class="card">
+                    <img src="img/albumes/genesis.jpg" alt="Álbum 6">
+                    <div class="card-info">
+                        <h3>GÉNESIS</h3>
+                        <p>Peso Pluma</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-container">
+                <a href="https://open.spotify.com/intl-es/album/15XcLhiVMlSOipUddTNDnr?si=0UbQLvs3Q4e8N1WVX6cIyA" class="card">
+                    <img src="img/albumes/muse.jpg" alt="Álbum 7">
+                    <div class="card-info">
+                        <h3>MUSE</h3>
+                        <p>Jimin</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/album/6BzxX6zkDsYKFJ04ziU5xQ?si=YzDNdOAyQMWGLfoq2FjJBg" class="card">
+                    <img src="img/albumes/cowboy.jpg" alt="Álbum 8">
+                    <div class="card-info">
+                        <h3>COWBOY CARTER</h3>
+                        <p>Beyoncé</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/album/56bdWeO40o3WfAD2Lja4dl?si=QGJi76LhS4GVuoveww6zgQ" class="card">
+                    <img src="img/albumes/secret.jpg" alt="Álbum 9">
+                    <div class="card-info">
+                        <h3>The Secret of Us</h3>
+                        <p>Gracie Abrams</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Our Team</a></li>
+                </ul>
+                <div class="footer-bottom">
+                    <p>&copy; 2022 Musical Culture. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

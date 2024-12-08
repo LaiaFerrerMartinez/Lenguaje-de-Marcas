@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards con Flexbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header id="inicio">
+        <div class="logo-nombre">
+            <img class="logo" src="logo.png" alt="Logo de la empresa">
+            <span class="nombre">Musical Culture</span>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <ul id="menu" class="menu-items">
+                <li class="dropdown"><a href="index.html"><b>Inicio</b></a></li>
+                <li class="dropdown">
+                    <a href="#canciones"><b>Canciones</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="canciones2024.html">2024</a></li>
+                        <li><a href="canciones2023.html">2023</a></li>
+                        <li><a href="canciones2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#albumes"><b>Álbumes</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="albumes2024.html">2024</a></li>
+                        <li><a href="albumes2023.html">2023</a></li>
+                        <li><a href="albumes2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#artistas"><b>Artistas</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="artistas2024.html">2024</a></li>
+                        <li><a href="artistas2023.html">2023</a></li>
+                        <li><a href="artistas2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#videoclips"><b>Videoclips</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="videoclips2024.html">2024</a></li>
+                        <li><a href="videoclips2023.html">2023</a></li>
+                        <li><a href="videoclips2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#giras"><b>Giras</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giras2024.html">2024</a></li>
+                        <li><a href="giras2023.html">2023</a></li>
+                        <li><a href="giras2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#premios"><b>Premios</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.grammy.com/">Grammy Awards</a></li>
+                        <li><a href="https://www.brits.co.uk/">BRIT Awards</a></li>
+                        <li><a href="https://www.mtv.com/vma">MTV VMAs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cards">
+            <h2>Canciones del 2024</h2>
+            <div class="flex-container">
+                <a href="https://open.spotify.com/intl-es/album/5quMTd5zeI9yW5UDua8wS4?si=8ApTEQjRTQmTviXVHLBk2A" class="card">
+                    <img src="img/canciones/espresso.jpg" alt="Canción 1">
+                    <div class="card-info">
+                        <h3>Espresso</h3>
+                        <p>Sabrina Carpenter</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/track/2OzhQlSqBEmt7hmkYxfT6m?si=30e58a83647742cd" class="card">
+                    <img src="img/canciones/fortnight.jpg" alt="Canción 2">
+                    <div class="card-info">
+                        <h3>Fortnight</h3>
+                        <p>Taylor Swift (feat. Post Malone)</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/track/6dOtVTDdiauQNBQEDOtlAB?si=5088988159be4adc" class="card">
+                    <img src="img/canciones/birds-of-a-feather.jpg" alt="Canción 3">
+                    <div class="card-info">
+                        <h3>BIRDS OF A FEATHER</h3>
+                        <p>Billie Eilish</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-container">
+                <a href="https://open.spotify.com/intl-es/track/6tNQ70jh4OwmPGpYy6R2o9?si=6abdb8d793e54711" class="card">
+                    <img src="img/canciones/beautiful-things.jpg" alt="Canción 4">
+                    <div class="card-info">
+                        <h3>Beautiful Things</h3>
+                        <p>Benson Boone</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/track/6XjDF6nds4DE2BBbagZol6?si=41986d89b1174693" class="card">
+                    <img src="img/canciones/gata-only.jpg" alt="Canción 5">
+                    <div class="card-info">
+                        <h3>Gata Only</h3>
+                        <p>FloyyMenor, Cris Mj</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/track/6usohdchdzW9oML7VC4Uhk?si=10419a78f8a242d5" class="card">
+                    <img src="img/canciones/lose-control.jpg" alt="Canción 6">
+                    <div class="card-info">
+                        <h3>Lose Control</h3>
+                        <p>Teddy Swims</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-container">
+                <a href="https://open.spotify.com/intl-es/track/3qhlB30KknSejmIvZZLjOD?si=ffd3968376bc4ad2" class="card">
+                    <img src="img/canciones/end-of-beginning.jpg" alt="Canción 7">
+                    <div class="card-info">
+                        <h3>End of Beginning</h3>
+                        <p>Djo</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/track/7CyPwkp0oE8Ro9Dd5CUDjW?si=1496c5d97bee4ffb" class="card">
+                    <img src="img/canciones/one-of-the-girls.jpg" alt="Canción 8">
+                    <div class="card-info">
+                        <h3>One Of The Girls</h3>
+                        <p>The Weeknd, JENNIE,</p>
+                        <p>Lily Rose-Deep</p>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/intl-es/track/2plbrEY59IikOBgBGLjaoe?si=648f61e75b284c0e" class="card">
+                    <img src="img/canciones/die-with-a-smile.jpg" alt="Canción 9">
+                    <div class="card-info">
+                        <h3>Die With A Smile</h3>
+                        <p>Lady Gaga, Bruno Mars</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Our Team</a></li>
+                </ul>
+                <div class="footer-bottom">
+                    <p>&copy; 2022 Musical Culture. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

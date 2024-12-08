@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards con Flexbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header id="inicio">
+        <div class="logo-nombre">
+            <img class="logo" src="logo.png" alt="Logo de la empresa">
+            <span class="nombre">Musical Culture</span>
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <ul id="menu" class="menu-items">
+                <li class="dropdown"><a href="index.html"><b>Inicio</b></a></li>
+                <li class="dropdown">
+                    <a href="#canciones"><b>Canciones</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="canciones2024.html">2024</a></li>
+                        <li><a href="canciones2023.html">2023</a></li>
+                        <li><a href="canciones2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#albumes"><b>Álbumes</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="albumes2024.html">2024</a></li>
+                        <li><a href="albumes2023.html">2023</a></li>
+                        <li><a href="albumes2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#artistas"><b>Artistas</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="artistas2024.html">2024</a></li>
+                        <li><a href="artistas2023.html">2023</a></li>
+                        <li><a href="artistas2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#videoclips"><b>Videoclips</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="videoclips2024.html">2024</a></li>
+                        <li><a href="videoclips2023.html">2023</a></li>
+                        <li><a href="videoclips2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#giras"><b>Giras</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="giras2024.html">2024</a></li>
+                        <li><a href="giras2023.html">2023</a></li>
+                        <li><a href="giras2022.html">2022</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#premios"><b>Premios</b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.grammy.com/">Grammy Awards</a></li>
+                        <li><a href="https://www.brits.co.uk/">BRIT Awards</a></li>
+                        <li><a href="https://www.mtv.com/vma">MTV VMAs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cards">
+            <h2>Giras del 2024</h2>
+            <div class="flex-container">
+                <a href="https://es.wikipedia.org/wiki/The_Eras_Tour" class="card">
+                    <img src="img/giras/eras.jpg" alt="Gira 1">
+                    <div class="card-info">
+                        <h3>The Eras Tour</h3>
+                        <p>Taylor Swift</p>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Music_of_the_Spheres_World_Tour" class="card">
+                    <img src="img/giras/coldplay.jpg" alt="Gira 2">
+                    <div class="card-info">
+                        <h3>Music of the Spheres World Tour</h3>
+                        <p>Coldplay</p>
+                    </div>
+                </a>
+                <a href="https://es.wikipedia.org/wiki/The_Celebration_Tour" class="card">
+                    <img src="img/giras/madonna.jpg" alt="Gira 3">
+                    <div class="card-info">
+                        <h3>The Celebration Tour</h3>
+                        <p>Madonna</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-container">
+                <a href="https://www.zachbryan.com/tour" class="card">
+                    <img src="img/giras/time-tour.jpg" alt="Gira 4">
+                    <div class="card-info">
+                        <h3>The Quittin' Time Tour</h3>
+                        <p>Zach Bryan</p>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Trustfall_Tour" class="card">
+                    <img src="img/giras/trustfall.jpg" alt="Gira 5">
+                    <div class="card-info">
+                        <h3>Trustfall Tour</h3>
+                        <p>P!nk</p>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Most_Wanted_Tour_(Bad_Bunny)" class="card">
+                    <img src="img/giras/most-wanted.jpg" alt="Gira 6">
+                    <div class="card-info">
+                        <h3>Most Wanted Tour</h3>
+                        <p>Bad Bunny</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex-container">
+                <a href="https://en.wikipedia.org/wiki/The_Forget_Tomorrow_World_Tour" class="card">
+                    <img src="img/giras/tomorrow.jpg" alt="Gira 8">
+                    <div class="card-info">
+                        <h3>The Forget Tommorrow World Tour</h3>
+                        <p>Justin Timberlake</p>
+                    </div>
+                </a>
+                <a href="https://es.wikipedia.org/wiki/Guts_World_Tour" class="card">
+                    <img src="img/giras/guts.jpg" alt="Gira 7">
+                    <div class="card-info">
+                        <h3>Guts World Tour</h3>
+                        <p>Olivia Rodrigo</p>
+                    </div>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/U2:UV_Achtung_Baby_Live_at_Sphere" class="card">
+                    <img src="img/giras/baby.jpg" alt="Gira 9">
+                    <div class="card-info">
+                        <h3>U2:UV Achtung Baby Live Tour </h3>
+                        <p>U2</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Our Team</a></li>
+                </ul>
+                <div class="footer-bottom">
+                    <p>&copy; 2022 Musical Culture. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
