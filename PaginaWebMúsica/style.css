@@ -425,7 +425,7 @@ nav ul li:hover::after {
 }
 
 .flex-container {
-    margin: 75px;
+    margin: 150px;
     margin-top: 25px;
     display: flex;
     justify-content: space-around;
@@ -491,6 +491,7 @@ nav ul li:hover::after {
 
     .flex-container {
         justify-content: space-between;
+        margin-bottom: 125px;
     }
 
     .card {
